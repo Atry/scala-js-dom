@@ -10,6 +10,7 @@
 package org.scalajs.dom.raw
 
 import scala.scalajs.js
+import scala.scalajs.js.|
 
 @js.native
 abstract class HTMLDocument extends Document {
@@ -3968,7 +3969,8 @@ abstract class HTMLElement extends Element {
    *
    * MDN
    */
-  var style: CSSStyleDeclaration = js.native
+  val style: CSSStyleDeclaration = js.native
+  def style_=: CSSStyleDeclaration | String = js.native
 
   /**
    * Returns the Document that this node belongs to. If no document is associated with
